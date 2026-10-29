@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 260" role="img" aria-label="EL CHUPE Cantina">
+  <defs>
+    <linearGradient id="foil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F6E3B4"/>
+      <stop offset="38%" stop-color="#E8C583"/>
+      <stop offset="62%" stop-color="#C79A47"/>
+      <stop offset="63%" stop-color="#C79A47"/>
+      <stop offset="100%" stop-color="#8E6B2F"/>
+    </linearGradient>
+    <linearGradient id="foilSoft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8E6B2F"/>
+      <stop offset="50%" stop-color="#E8C583"/>
+      <stop offset="100%" stop-color="#8E6B2F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- agave -->
+  <g fill="url(#foil)" transform="translate(310 12)">
+    <path d="M0 0 L6 44 L0 58 L-6 44 Z"/>
+    <path d="M-26 6 L-6 44 L-10 58 L-24 42 Z" opacity=".95"/>
+    <path d="M26 6 L6 44 L10 58 L24 42 Z" opacity=".95"/>
+    <path d="M-48 20 L-12 48 L-18 60 L-42 40 Z" opacity=".85"/>
+    <path d="M48 20 L12 48 L18 60 L42 40 Z" opacity=".85"/>
+    <path d="M-68 40 L-16 54 L-20 62 L-62 52 Z" opacity=".7"/>
+    <path d="M68 40 L16 54 L20 62 L62 52 Z" opacity=".7"/>
+  </g>
+
+  <!-- lineas laterales -->
+  <rect x="120" y="78" width="120" height="3" rx="1.5" fill="url(#foilSoft)"/>
+  <rect x="380" y="78" width="120" height="3" rx="1.5" fill="url(#foilSoft)"/>
+
+  <!-- botella -->
+  <g fill="none" stroke="url(#foilSoft)" stroke-width="3" opacity=".9">
+    <path d="M40 168 C40 118 120 96 300 96 C420 96 500 104 528 118"/>
+    <path d="M40 168 C40 206 130 222 300 222 C420 222 500 210 528 196"/>
+    <path d="M528 118 L566 118 L566 196 L528 196"/>
+  </g>
+  <g stroke="url(#foil)" stroke-width="2.5" opacity=".8">
+    <line x1="538" y1="124" x2="538" y2="190"/>
+    <line x1="548" y1="124" x2="548" y2="190"/>
+    <line x1="558" y1="124" x2="558" y2="190"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="290" y="176" text-anchor="middle" fill="url(#foil)"
+        font-family="Georgia, 'Times New Roman', serif" font-style="italic"
+        font-weight="700" font-size="92" letter-spacing="1">El Chupe</text>
+
+  <!-- subtitulo -->
+  <g fill="url(#foil)">
+    <circle cx="212" cy="240" r="3.5"/>
+    <circle cx="408" cy="240" r="3.5"/>
+  </g>
+  <text x="310" y="247" text-anchor="middle" fill="url(#foil)"
+        font-family="Helvetica, Arial, sans-serif" font-weight="600"
+        font-size="26" letter-spacing="10">CANTINA</text>
+</svg>

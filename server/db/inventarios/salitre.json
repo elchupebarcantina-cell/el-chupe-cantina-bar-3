@@ -1,0 +1,48 @@
+{
+  "sede": {
+    "name": "EL CHUPE SALITRE",
+    "legal_name": "EL CHUPE CANTINA",
+    "city": "Bogota"
+  },
+  "categorias": [
+    { "name": "Cerveza",    "color": "#C9A227", "orden": 1 },
+    { "name": "Licores",    "color": "#8E6B2F", "orden": 2 },
+    { "name": "Bebidas",    "color": "#5F8C7B", "orden": 3 },
+    { "name": "Snacks",     "color": "#D08A50", "orden": 4 },
+    { "name": "Cafetería",  "color": "#7A5230", "orden": 5 }
+  ],
+  "productos": [
+    { "code": "CER-001", "name": "Águila Light",      "categoria": "Cerveza", "stock": 150 },
+    { "code": "CER-002", "name": "Costeña",           "categoria": "Cerveza", "stock": 150 },
+    { "code": "CER-003", "name": "Águila Original",   "categoria": "Cerveza", "stock": 150 },
+    { "code": "CER-004", "name": "Póker",             "categoria": "Cerveza", "stock": 150 },
+    { "code": "CER-005", "name": "Coronita",          "categoria": "Cerveza", "stock": 192 },
+    { "code": "CER-006", "name": "Corona",            "categoria": "Cerveza", "stock": 120 },
+    { "code": "CER-007", "name": "Stella",            "categoria": "Cerveza", "stock": 96 },
+    { "code": "CER-008", "name": "Smirnoff",          "categoria": "Cerveza", "stock": 24 },
+
+    { "code": "LIC-001", "name": "Aguardiente Amarillo 1/2",        "categoria": "Licores", "stock": 20 },
+    { "code": "LIC-002", "name": "Aguardiente Amarillo Botella",    "categoria": "Licores", "stock": 12 },
+    { "code": "LIC-003", "name": "Aguardiente Antioqueño 1/2",      "categoria": "Licores", "stock": 10 },
+    { "code": "LIC-004", "name": "Aguardiente Antioqueño Botella",  "categoria": "Licores", "stock": 10 },
+    { "code": "LIC-005", "name": "Ron Medellín Botella",            "categoria": "Licores", "stock": 2 },
+    { "code": "LIC-006", "name": "Tequila José Cuervo Botella",     "categoria": "Licores", "stock": 3 },
+    { "code": "LIC-007", "name": "Tequila Patrón Botella",          "categoria": "Licores", "stock": 3 },
+    { "code": "LIC-008", "name": "Whisky Buchanan's Botella",        "categoria": "Licores", "stock": 3 },
+    { "code": "LIC-009", "name": "Whisky Sello Rojo Botella",       "categoria": "Licores", "stock": 3 },
+
+    { "code": "BEB-001", "name": "Agua Natural",      "categoria": "Bebidas", "stock": 96 },
+    { "code": "BEB-002", "name": "Agua con Gas",      "categoria": "Bebidas", "stock": 24 },
+    { "code": "BEB-003", "name": "Electrolit",        "categoria": "Bebidas", "stock": 36 },
+    { "code": "BEB-004", "name": "Gatorade",          "categoria": "Bebidas", "stock": 0 },
+    { "code": "BEB-005", "name": "Four Loko",         "categoria": "Bebidas", "stock": 21 },
+
+    { "code": "SNK-001", "name": "De Todito",         "categoria": "Snacks", "stock": 24 },
+    { "code": "SNK-002", "name": "Papas Pollo",       "categoria": "Snacks", "stock": 24 },
+    { "code": "SNK-003", "name": "Chiclets x3",       "categoria": "Snacks", "stock": 48 },
+    { "code": "SNK-004", "name": "Maní",              "categoria": "Snacks", "stock": 48 },
+
+    { "code": "CAF-001", "name": "Cigarrillos Mustang 1/2", "categoria": "Cafetería", "stock": 20 },
+    { "code": "CAF-002", "name": "Cigarrillos Lucky 1/2",   "categoria": "Cafetería", "stock": 20 }
+  ]
+}

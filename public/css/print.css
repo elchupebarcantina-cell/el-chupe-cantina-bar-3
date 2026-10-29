@@ -1,0 +1,65 @@
+/* =====================================================================
+   Impresion: tickets y comandas para impresoras termicas 58mm y 80mm
+
+   La hoja se ajusta al ancho del rollo y crece solo lo que mida el
+   ticket. No se imprime en tamano carta.
+   El tamano exacto lo inyecta printHtml() en ui.js segun la
+   configuracion del negocio.
+   ===================================================================== */
+
+.print-area { display: none; }
+
+@media print {
+  /* El resto de la interfaz se saca del flujo por completo. Si solo se
+     ocultara, seguiria ocupando alto y saldrian hojas en blanco al final. */
+  #root, .toasts, #modals, .modal-backdrop { display: none !important; }
+
+  html, body {
+    background: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .print-area {
+    display: block !important;
+    position: static;
+    margin: 0;
+    background: #fff !important;
+    color: #000 !important;
+    font-family: 'Courier New', ui-monospace, monospace;
+    font-size: 12px;
+    line-height: 1.35;
+    padding: 3mm 2mm;
+    box-sizing: border-box;
+    /* Evita que una linea larga desborde el rollo */
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .print-area .p-center { text-align: center; }
+  .print-area .p-right { text-align: right; }
+  .print-area .p-bold { font-weight: bold; }
+  .print-area .p-big { font-size: 17px; font-weight: bold; letter-spacing: 1px; }
+  .print-area .p-sep { border-top: 1px dashed #000; margin: 5px 0; }
+  .print-area .p-row { display: flex; justify-content: space-between; gap: 6px; }
+  .print-area .p-item { margin: 3px 0; }
+  .print-area .p-note { font-style: italic; padding-left: 8px; }
+  .print-area table { width: 100%; border-collapse: collapse; }
+  .print-area td { padding: 1px 0; vertical-align: top; }
+  .print-area .p-total { font-size: 15px; font-weight: bold; }
+  .print-area .p-logo { max-width: 40mm; margin: 0 auto 3mm; display: block; filter: grayscale(1) contrast(2); }
+
+  /* Nada de cortes de pagina en mitad de una linea del ticket */
+  .print-area .p-row,
+  .print-area .p-item,
+  .print-area tr { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Espacio para que la cuchilla no corte el ultimo renglon */
+  .print-area::after { content: ''; display: block; height: 8mm; }
+}
+
+/* Ancho del rollo. Tambien aplica en pantalla para la vista previa. */
+body.ticket-58 .print-area { width: 58mm; font-size: 11px; }
+body.ticket-80 .print-area { width: 80mm; }

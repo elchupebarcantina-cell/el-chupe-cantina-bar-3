@@ -1,0 +1,122 @@
+/* =====================================================================
+   EL CHUPE — sistema de diseno
+   Paleta tomada del logo: dorado sobre negro calido, agave y barro.
+   ===================================================================== */
+
+:root {
+  /* superficies */
+  --noche:      #0B0908;
+  --carbon:     #131010;
+  --panel:      #191514;
+  --panel-alto: #221C19;
+  --madera:     #2E251F;
+  --borde:      #322A24;
+  --borde-vivo: #4A3C2E;
+
+  /* marca */
+  --oro:        #E8C583;
+  --oro-claro:  #F6E3B4;
+  --oro-hondo:  #B8873D;
+  --oro-sombra: #8E6B2F;
+  --foil: linear-gradient(180deg, var(--oro-claro) 0%, var(--oro) 40%, var(--oro-hondo) 75%, var(--oro-sombra) 100%);
+
+  /* estados */
+  --agave:      #7FA37A;
+  --agave-oscuro: #1D2A1E;
+  --barro:      #C7583C;
+  --barro-oscuro: #2C1713;
+  --ambar:      #D89B3C;
+  --ambar-oscuro: #2C2010;
+  --azul:       #6C8FB5;
+  --azul-oscuro: #16202B;
+
+  /* texto */
+  --crema:      #F3E9D8;
+  --texto:      #E4D9C6;
+  --texto-2:    #A99B87;
+  --texto-3:    #6F6558;
+
+  /* tipografia */
+  --display: 'Alfa Slab One', Rockwell, 'Courier Bold', Georgia, serif;
+  --ui: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* medidas */
+  --r-sm: 6px;
+  --r: 10px;
+  --r-lg: 16px;
+  --sidebar: 248px;
+  --header: 62px;
+  --sombra: 0 10px 30px rgba(0, 0, 0, .45);
+  --sombra-sm: 0 3px 12px rgba(0, 0, 0, .35);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--ui);
+  background: var(--noche);
+  color: var(--texto);
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums;
+  overscroll-behavior: none;
+}
+
+h1, h2, h3, h4 { font-weight: 600; line-height: 1.2; color: var(--crema); }
+
+a { color: var(--oro); text-decoration: none; }
+
+button, input, select, textarea { font-family: inherit; font-size: inherit; color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--oro);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--carbon); }
+::-webkit-scrollbar-thumb { background: var(--madera); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--borde-vivo); }
+
+/* ---------- marca ---------- */
+.foil {
+  background: var(--foil);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brand-title {
+  font-family: var(--display);
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+/* ---------- utilidades ---------- */
+.row { display: flex; align-items: center; gap: 10px; }
+.row-between { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.wrap { flex-wrap: wrap; }
+.col { display: flex; flex-direction: column; gap: 10px; }
+.grow { flex: 1; min-width: 0; }
+.right { text-align: right; }
+.center { text-align: center; }
+.muted { color: var(--texto-2); }
+.dim { color: var(--texto-3); }
+.small { font-size: 13px; }
+.tiny { font-size: 11.5px; letter-spacing: .4px; text-transform: uppercase; }
+.bold { font-weight: 600; }
+.mono-num { font-variant-numeric: tabular-nums; }
+.hidden { display: none !important; }
+.nowrap { white-space: nowrap; }
+.scroll-y { overflow-y: auto; }
+.mt { margin-top: 14px; }
+.mb { margin-bottom: 14px; }
+.gap-lg { gap: 18px; }
+
+.pos-neg { color: var(--barro); }
+.pos-pos { color: var(--agave); }

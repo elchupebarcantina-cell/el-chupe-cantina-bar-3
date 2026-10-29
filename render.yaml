@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: elchupe-pos
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/version
+    disk:
+      name: datos
+      mountPath: /datos
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TRUST_PROXY
+        value: "1"
+      - key: DB_PATH
+        value: /datos/elchupe.db
+      - key: BACKUP_DIR
+        value: /datos/backups
+      - key: UPLOAD_DIR
+        value: /datos/uploads
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: TZ
+        value: America/Bogota

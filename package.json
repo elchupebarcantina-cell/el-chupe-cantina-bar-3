@@ -1,0 +1,37 @@
+{
+  "name": "el-chupe-pos",
+  "version": "1.6.1",
+  "description": "EL CHUPE — Sistema POS para cafe bar / cantina",
+  "private": true,
+  "type": "commonjs",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "migrate": "node server/db/migrate.js",
+    "seed": "node server/db/seed.js",
+    "setup": "node server/db/migrate.js && node server/db/seed.js",
+    "backup": "node server/db/backup.js",
+    "reset": "node server/db/reset.js",
+    "demo": "node server/db/seed.js --demo",
+    "setup:demo": "node server/db/migrate.js && node server/db/seed.js --demo",
+    "clave": "node server/db/password.js",
+    "reparar": "node server/db/reparar-gastos.js",
+    "inventario": "node server/db/inventario-inicial.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.1"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^12.4.1"
+  },
+  "build": "2026.10.28-1"
+}
